@@ -1,0 +1,38 @@
+body {
+    background-color: #949494;
+    margin-top: 2%;
+}
+
+h3,h1 {
+    color: #0F487F;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 6.5%;
+}
+
+li {
+    color: #0F487F;
+    font-weight: bold;
+    font-size: 17px;
+    list-style:none;
+}
+
+span {
+    color: red;
+    font-weight: bold;
+}
+
+.color-valor {
+    color: #007bff;
+}
+
+.btn-action {
+    margin-top: 1%;
+}
+
+#total-list {
+    margin-top: 23.5%;
+    font-size: 18px;
+}

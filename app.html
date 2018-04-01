@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="container" id="app">
+        <div class="row">
+        <div class="col-md-6">
+        <h1>Gestion du merchandising</h1>
+            <ul>
+                <li v-for="product in products">
+                    {{ product.quantity }} {{ product.name }}
+                    <span v-if="product.quantity === 0">
+                            Temporairement indisponible
+                    </span>
+                    <div class="btn-action">
+                    <button type="button" id="add-btn" class="btn btn-primary" @click="product.quantity += 1">Ajouter</button>
+                    <button type="button" class="btn btn-danger"  @click="product.quantity -= 1">X</button>
+                    </div>
+                </li>
+            </ul>
+            </div>
+            <div class="col-md-6" id="total-list">
+        
+        <h3>Total des stocks disponible:   <span class="color-valor">{{ totalProducts }}</span></h3>
+        <h3>Total des EP(S) disponible:    <span class="color-valor">{{ products[0].quantity }}</span></h3>
+        <h3>Total des Vinyles disponible:  <span class="color-valor">{{ products[1].quantity }}</span></h3>
+        <h3>Total des Patchs disponible:   <span class="color-valor">{{ products[2].quantity }}</span></h3>
+        <h3>Total des Badges disponible:   <span class="color-valor">{{ products[3].quantity }}</span></h3>
+        <h3>Total des Stickers disponible: <span class="color-valor">{{ products[4].quantity }}</span></h3>
+        <h3>Total des Tee-shirt taille S disponible:  <span class="color-valor">{{ products[5].quantity }}</span></h3>
+        <h3>Total des Tee-shirt taille M disponible:  <span class="color-valor">{{ products[6].quantity }}</span></h3>
+        <h3>Total des Tee-shirt taille L disponible:  <span class="color-valor"> {{ products[7].quantity }}</span></h3>
+        <h3>Total des Tee-shirt taille XL disponible: <span class="color-valor"> {{ products[8].quantity }}</span></h3>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
